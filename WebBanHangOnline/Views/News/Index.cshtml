@@ -5,6 +5,9 @@
     ViewBag.Title = "Index";
 }
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/main_styles.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="~/Content/PagedList.css">
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <!-- Slider -->
 <style>
     .news_section_container {
@@ -53,12 +56,14 @@
                 </div>
             </div>
         }
-        <div class="row">
-            <div class="col-6"></div>
-            <div class="col-6" style="text-align:right;">
-                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
-            </div>
-        </div>
+
+
     }
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6" style="text-align:right;">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
 
 </div>

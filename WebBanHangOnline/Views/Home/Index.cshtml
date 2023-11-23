@@ -10,7 +10,7 @@
         <div class="row align-items-center fill_height">
             <div class="col">
                 <div class="main_slider_content">
-                    <div style="margin-left:400px; margin-top:500px" class="red_button shop_now_button"><a href="#">shop now</a></div>
+                    <div style="margin-left:400px; margin-top:500px" class="red_button shop_now_button"><a href="/products">shop now</a></div>
                 </div>
             </div>
         </div>
@@ -22,12 +22,11 @@
 @Html.Action("MenuProductCategory", "Menu")
 
 <!-- New Arrivals -->
-
 <div class="new_arrivals">
-    <div class="container">
-        @Html.Action("MenuArrivals", "Menu")
+        <div class="container">
+            @Html.Action("MenuArrivals", "Menu")
+        </div>
     </div>
-</div>
 
 <!-- Deal of the week -->
 
@@ -62,7 +61,7 @@
                             <div class="timer_unit">Sec</div>
                         </li>
                     </ul>
-                    <div class="red_button deal_ofthe_week_button"><a href="#">shop now</a></div>
+                    <div class="red_button deal_ofthe_week_button"><a href="/products">shop now</a></div>
                 </div>
             </div>
         </div>

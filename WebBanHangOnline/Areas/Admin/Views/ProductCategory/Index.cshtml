@@ -161,11 +161,12 @@
                 });
             });
             $('body').on('click', '.btnDelete', function () {
-                var id = $(this).data("id");
+                var btn = $(this);
+                var id = btn.data("id");
                 var conf = confirm('Bạn có muốn xóa bản ghi này không?');
                 if (conf === true) {
                     $.ajax({
-                        url: '/admin/news/delete',
+                        url: '/admin/productcategory',
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {

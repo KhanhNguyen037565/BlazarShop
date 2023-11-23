@@ -22,7 +22,7 @@
                 }
                 @* <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>*@
                 <div class="product_info">
-                    <h6 class="product_name"><a href="/chi-tiet/@item.Alias-p@(item.Id)">@item.Title</a></h6>
+                    <h6 class="product_name"><a href="/danh-muc-san-pham/@item.Alias-@(item.Id)">@item.Title</a></h6>
                     @if (item.PriceSale > 0)
                     {
                         <div class="product_price">@WebBanHangOnline.Common.Common.FormatNumber(item.PriceSale, 0)<span>@WebBanHangOnline.Common.Common.FormatNumber(item.Price, 0)</span></div>
