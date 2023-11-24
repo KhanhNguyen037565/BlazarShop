@@ -100,7 +100,17 @@
         </div>
 
     </div>
-
+    <style>
+        .tab_container active {
+            margin: 0;
+        }
+        .tabs_container {
+            margin:0 !important;
+        }
+        .col-lg-9 image_col order-lg-2 order-1 {
+            margin-bottom: 0 !important;
+        }
+    </style>
     <div class="tabs_section_container">
 
         <div class="container">
@@ -108,7 +118,7 @@
                 <div class="col">
                     <div class="tabs_container">
                         <ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
-                            <li class="tab active" data-active-tab="tab_1"><span>Description</span></li>
+                            <li class="tab active" data-active-tab="tab_1"><span>Best Similars</span></li>
                             @*<li class="tab" data-active-tab="tab_2"><span>Additional Information</span></li>*@
                             <li class="tab" data-active-tab="tab_3"><span>Reviews (2)</span></li>
                         </ul>
@@ -118,11 +128,13 @@
             <div class="row">
                 <div class="col">
 
-                    <!-- Tab Description -->
+                    <!-- Tab Similar -->
 
                     <div id="tab_1" class="tab_container active">
                         <div class="row">
-                            @Html.Raw(Model.Detail)
+                            <div>
+                                @Html.Action("Partial_ProductSimilars", "Products")
+                            </div>
                         </div>
                     </div>
 
@@ -223,9 +235,7 @@
 
     </div>
 
-    <div>
-        @Html.Action("Partial_ProductSimilars", "Products")
-    </div>
+    
 
 }
 @section scripts{
